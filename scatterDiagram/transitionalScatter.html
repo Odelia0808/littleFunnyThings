@@ -59,7 +59,6 @@
 
 			drawcircle();
 
-			//过渡函数
 			function drawcircle(){
 				var docsUpdate = svg.selectAll("circle").data(docArr)
 				var docsEnter = docsUpdate.enter()
@@ -83,6 +82,16 @@
 								return svgStyle.top+yScale(d[1]);
 							})
 							.attr("r",5)
+							.on("mouseenter",function(){
+								d3.select(this)
+									.attr("fill","steelblue")
+							})
+							.on("mouseout",function(){
+								d3.select(this)
+									.transition()
+									.duration(200)
+									.attr("fill","yellow")
+							})
 							.transition()
 							.duration(500)
 							.attr("cx",function(d,i){
@@ -91,6 +100,7 @@
 							.attr("cy",function(d,i){
 								return svgStyle.top+yScale(d[1]);
 							})
+							
 							
 
 				docsExit.transition()
