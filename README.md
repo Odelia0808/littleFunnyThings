@@ -3,4 +3,4 @@
 
 heroAndMonsterGame is a little canvas can learnning from web site https://www.shiyanlou.com/courses/361/labs/1158/document
 
-scatterDiagram is learning from book named 《精通D3.js》
+d3jsDiagrams is learning from book named 《精通D3.js》
